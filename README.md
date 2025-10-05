@@ -77,7 +77,7 @@ A comprehensive web application built with **Flask** and **Chart.js** for visual
 
 The Flask application is structured to separate data loading, routing, and static assets.
 
-
+```
 global-environmental-monitor/
 ├── app.py                  # Main Flask application with data loading and API/HTML routes
 ├── requirements.txt        # Python dependencies
@@ -93,7 +93,7 @@ global-environmental-monitor/
     ├── css/
     ├── js/                 # Includes client-side logic for fetching data and rendering charts (e.g., earthquake.js)
     └── images/
-
+```
 
 ---
 
