@@ -1,6 +1,7 @@
 # 🌍 Global Environmental Monitor
 
 A comprehensive web application built with **Flask** and **Chart.js** for visualizing and analyzing critical global environmental and seismic data. Our mission is to make complex environmental information accessible and understandable through interactive visualizations and country-specific insights.
+
 Here is the link for our website-- https://global-monitor.onrender.com/
 
 ✨ Features
