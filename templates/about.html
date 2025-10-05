@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>About - Global Environmental Monitor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/custom.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <h1>
+        <i class="fas fa-info-circle" style="color: var(--accent-color);"></i>
+        About
+      </h1>
+      <p>
+        Information about Global Environmental Monitor
+      </p>
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="/electricity"><i class="fas fa-bolt"></i> Electricity Usage</a></li>
+          <li><a href="/oil"><i class="fas fa-oil-can"></i> Oil Consumption</a></li>
+          <li><a href="/epi"><i class="fas fa-leaf"></i> EPI</a></li>
+          <li><a href="/earthquake"><i class="fas fa-house-crack"></i> Earthquake</a></li>
+          <li><a href="/about" class="active"><i class="fas fa-info-circle"></i> About</a></li>
+        </ul>
+      </nav>
+      <!-- Mobile Menu Overlay -->
+      <div class="overlay" id="menuOverlay"></div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <div class="about-section">
+        <h2>About This Project</h2>
+        <p>The Global Environmental Monitor is a comprehensive platform for visualizing and analyzing critical environmental data from around the world. Our mission is to make complex environmental information accessible and understandable through interactive visualizations and country-specific insights.</p>
+        
+        <h2>Data Sources</h2>
+        <ul>
+          <li><strong>Electricity Usage Data:</strong> Provides information on electricity demand and per capita usage across countries and years.</li>
+          <li><strong>Oil Consumption Data:</strong> Tracks global oil consumption trends measured in terawatt-hours.</li>
+          <li><strong>Environmental Performance Index (EPI):</strong> Measures environmental health and ecosystem vitality across nations.</li>
+          <li><strong>Earthquake Data:</strong> Records earthquake frequency by country and year.</li>
+        </ul>
+        
+        <h2>Tools & Technologies</h2>
+        <ul>
+          <li>Backend: Python with Flask</li>
+          <li>Data Processing: Pandas</li>
+          <li>Frontend: HTML, CSS, JavaScript</li>
+          <li>Data Visualization: Chart.js</li>
+        </ul>
+        
+        <h2>Contact</h2>
+        <p>For more information or to report data issues, please contact us at <a href="mailto:info@globalmo.com">info@globalmo.com</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="/static/js/animations.js"></script>
+</body>
+</html>

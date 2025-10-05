@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>GlobalMo.com - Global Environmental Monitor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/custom.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <h1 class="fade-in fade-in-1">
+        <i class="fas fa-globe-americas" style="color: var(--accent-color);"></i>
+        Global Monitor
+      </h1>
+      <p class="fade-in fade-in-2">
+        Interactive visualization of environmental data including electricity usage, oil consumption, and environmental metrics worldwide
+      </p>
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav>
+        <ul class="nav-menu fade-in fade-in-3" id="navMenu">
+          <li><a href="/" class="active"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="/electricity"><i class="fas fa-bolt"></i> Electricity Usage</a></li>
+          <li><a href="/oil"><i class="fas fa-oil-can"></i> Oil Consumption</a></li>
+          <li><a href="/epi"><i class="fas fa-leaf"></i> EPI</a></li>
+          <li><a href="/earthquake"><i class="fas fa-house-crack"></i> Earthquake</a></li>
+          <li><a href="/about"><i class="fas fa-info-circle"></i> About</a></li>
+        </ul>
+      </nav>
+      <!-- Mobile Menu Overlay -->
+      <div class="overlay" id="menuOverlay"></div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <!-- Category Cards -->
+      <div class="card-grid fade-in fade-in-3">
+        <!-- Electricity Usage Card -->
+        <a href="/electricity" class="category-card fade-in fade-in-1">
+          <div class="card-img">
+            <img src="/static/images/electicity.jpeg" alt="Electricity towers and power lines">
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-bolt" style="color: var(--electricity-color);"></i> Electricity Usage</h3>
+            <p>Explore global electricity consumption patterns and renewable energy adoption across different countries.</p>
+          </div>
+        </a>
+
+        <!-- Oil Consumption Card -->
+        <a href="/oil" class="category-card fade-in fade-in-2">
+          <div class="card-img">
+            <img src="/static/images/petrol.webp" alt="Petrol pump station">
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-oil-can" style="color: var(--oil-color);"></i> Oil Consumption</h3>
+            <p>Analyze historical and current oil consumption data with predictions for future usage trends.</p>
+          </div>
+        </a>
+
+        <!-- EPI Card -->
+        <a href="/epi" class="category-card fade-in fade-in-1">
+          <div class="card-img">
+            <img src="/static/images/epi.jpeg" alt="Green forest and environmental landscape">
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-leaf" style="color: #3fe5ff;"></i> Environment Performance Index</h3>
+            <p>Track environmental health and ecosystem vitality scores across different nations and regions.</p>
+          </div>
+        </a>
+
+        <!-- Earthquake Card -->
+        <a href="/earthquake" class="category-card fade-in fade-in-2">
+          <div class="card-img">
+            <img src="/static/images/earthquake.jpeg" alt="Cracked road from earthquake">
+          </div>
+          <div class="card-content">
+            <h3><i class="fas fa-house-crack" style="color: #ff4757;"></i> Earthquake Data</h3>
+            <p>Monitor global seismic activity with detailed earthquake counts and geographic distribution.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Global Statistics Section -->
+      <h2 class="section-title fade-in fade-in-1">
+        <i class="fas fa-chart-pie"></i> Global Statistics
+      </h2>
+      <div class="stats-container">
+        <div class="stats-grid">
+          <!-- Electricity Stat Card -->
+          <div class="stat-card electricity fade-in fade-in-1">
+            <i class="fas fa-bolt stat-icon"></i>
+            <h3>24,673 TWh</h3>
+            <p>Annual consumption</p>
+          </div>
+
+          <!-- Oil Stat Card -->
+          <div class="stat-card oil fade-in fade-in-2">
+            <i class="fas fa-oil-can stat-icon"></i>
+            <h3>97.4M</h3>
+            <p>Barrels per day</p>
+          </div>
+
+          <!-- Air Pollution Stat Card -->
+          <div class="stat-card pollution fade-in fade-in-3">
+            <i class="fas fa-smog stat-icon"></i>
+            <h3>65.3</h3>
+            <p>Average AQI</p>
+          </div>
+
+          <!-- Water Quality Stat Card -->
+          <div class="stat-card water fade-in fade-in-4">
+            <i class="fas fa-water stat-icon"></i>
+            <h3>72.8%</h3>
+            <p>Global average</p>
+          </div>
+        </div>
+      </div>
+
+  <!-- Background Animation Elements -->
+  <div class="background-animation" id="bgAnimation" style="display:none;"></div>
+
+  <script src="/static/js/animations.js"></script>
+</body>
+</html>

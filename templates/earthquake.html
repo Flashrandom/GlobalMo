@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Earthquake Data - Global Environmental Monitor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/custom.css">
+  <!-- Add Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <h1>
+        <i class="fas fa-house-crack" style="color: var(--accent-color);"></i>
+        Earthquake Data
+      </h1>
+      <p>
+        Global earthquake frequency by country and year
+      </p>
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="/electricity"><i class="fas fa-bolt"></i> Electricity Usage</a></li>
+          <li><a href="/oil"><i class="fas fa-oil-can"></i> Oil Consumption</a></li>
+          <li><a href="/epi"><i class="fas fa-leaf"></i> EPI</a></li>
+          <li><a href="/earthquake" class="active"><i class="fas fa-house-crack"></i> Earthquake</a></li>
+          <li><a href="/about"><i class="fas fa-info-circle"></i> About</a></li>
+        </ul>
+      </nav>
+      <!-- Mobile Menu Overlay -->
+      <div class="overlay" id="menuOverlay"></div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <!-- Country Filter -->
+      <div class="filter-section">
+        <h2>Filter Data</h2>
+        <div class="form-group">
+          <label for="countrySelect">Select Country:</label>
+          <select id="countrySelect" class="form-control">
+            <option value="">Select a country</option>
+            <!-- Countries will be populated by JavaScript -->
+          </select>
+        </div>
+      </div>
+
+      <!-- Charts Section -->
+      <div class="charts-section">
+        <div class="chart-container">
+          <h2>Earthquake Frequency Over Time</h2>
+          <canvas id="timeSeriesChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+          <h2>Top 10 Countries by Earthquake Frequency</h2>
+          <canvas id="topCountriesChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Data Table Section -->
+      <div class="data-table">
+        <h2>Earthquake Data</h2>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Country</th>
+                <th>Year</th>
+                <th>Number of Earthquakes</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <!-- Table data will be populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Country Comparison Section -->
+      <div class="comparison-section">
+        <h2>Compare Countries</h2>
+        <div class="row">
+          <div class="col-md-5">
+            <select id="country1" class="form-control">
+              <option value="">Select first country</option>
+              <!-- Will be populated by JavaScript -->
+            </select>
+          </div>
+          <div class="col-md-5">
+            <select id="country2" class="form-control">
+              <option value="">Select second country</option>
+              <!-- Will be populated by JavaScript -->
+            </select>
+          </div>
+          <div class="col-md-2">
+            <button id="compareBtn" class="btn btn-primary">Compare</button>
+          </div>
+        </div>
+        <div class="chart-container">
+          <h3>Country Comparison</h3>
+          <canvas id="comparisonChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="loader" style="display: none;">
+    <div class="loader-overlay">
+      <div class="spinner"></div>
+    </div>
+  </div>
+
+  <script src="/static/js/animations.js"></script>
+  <script src="/static/js/earthquake.js"></script>
+</body>
+
+</html>
