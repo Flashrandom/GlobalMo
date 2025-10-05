@@ -79,24 +79,21 @@ The Flask application is structured to separate data loading, routing, and stati
 
 
 global-environmental-monitor/
-├── app.py                  # Main Flask application and API routes
+├── app.py                  # Main Flask application with data loading and API/HTML routes
 ├── requirements.txt        # Python dependencies
-├── data/                   # Directory for CSV data files
+├── data/                   # CSV data files loaded by Pandas
 │   ├── electricity_usage.csv
-│   ├── oil_consumption.csv
-│   ├── epi_data.csv
-│   └── earthquake_data.csv
-├── templates/              # HTML files for each page
+│   └── ... (other data files)
+├── templates/              # HTML files served as the application's pages
 │   ├── welcome.html        # Home page
-│   ├── earthquake.html     # Earthquake data page
 │   ├── electricity.html
 │   ├── oil.html
-│   ├── epi.html
-│   └── about.html
+│   └── ... (other pages)
 └── static/                 # Static assets (CSS, JS, Images)
     ├── css/
-    ├── js/                 # Includes data fetching and chart logic (e.g., earthquake.js)
+    ├── js/                 # Includes client-side logic for fetching data and rendering charts (e.g., earthquake.js)
     └── images/
+
 
 ---
 
